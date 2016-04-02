@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RobinNest
 // @namespace    simpcraft.com
-// @version      1.0
+// @version      1.1
 // @description  a bot
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -189,5 +189,4 @@ setInterval(function pickColor(){
 
 $('#robinDesktopNotifier').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
 
-$('.content').append('<button id=helloworld onclick="sendHelloWorldMessage();">Hello World</button>');
-helloworld.onclick=sendMessage("/vote grow");
+$('.content').append('<p id=robinsnest">additional features by lots of people, bundled up in RobinsNest.</p>');
