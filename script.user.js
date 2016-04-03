@@ -175,8 +175,6 @@ function sendUpdate() {
     ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
     ||msg.includes('DANKEST MEME')
     ||msg.includes('John Madden')
-    ||msg.includes('Correct Users')
-    ||msg.includes('Trivia')
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
         ) {
