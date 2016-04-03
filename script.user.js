@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.9.2
+ // @version      1.10
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -175,7 +175,7 @@ function sendUpdate() {
     ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
     ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
     ||msg.includes('DANKEST MEME')
-    ||msg.includes(' ')
+    ||msg.includes('')
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
         ) {
@@ -230,7 +230,17 @@ function sendUpdate() {
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" font-size:11px;"> Username color detector doesn\'t work.');
 
+// var css = document.createElement("style");
+// css.type = "text/css";
+// css.innerHTML = "a{display:block;-moz-box-sizing:border-box;box-sizing:border-box;background:url(http://notrealdomain2.com/newbanner.png) no-repeat;width:180px;height:236px;padding-left:180px}";
+// document.body.appendChild(css);
+ 
+  var css = document.createElement("style");
+ css.type = "text/css";
+ css.innerHTML = "div#header-bottom-left{background-color:#ffc9c9}";
+ document.body.appendChild(css);
+
  var css = document.createElement("style");
  css.type = "text/css";
- css.innerHTML = "a{display:block;-moz-box-sizing:border-box;box-sizing:border-box;background:url(http://notrealdomain2.com/newbanner.png) no-repeat;width:180px;height:236px;padding-left:180px}";
+ css.innerHTML = "div#header-bottom-right{background-color:#ffc9c9}";
  document.body.appendChild(css);
