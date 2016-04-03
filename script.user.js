@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.10.1
+ // @version      1.10.2
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -238,9 +238,5 @@ function sendUpdate() {
  var css = document.createElement("style");
  css.type = "text/css";
  css.innerHTML = "div#header-bottom-left{background-color:#ffc9c9}";
- document.body.appendChild(css);
-
- var css = document.createElement("style");
- css.type = "text/css";
  css.innerHTML = "div#header-bottom-right{background-color:#ffc9c9}";
  document.body.appendChild(css);
