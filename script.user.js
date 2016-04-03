@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.14
+ // @version      1.14.1
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -116,7 +116,7 @@
     var settings = Settings.load();
 
     // Options begin
-    Settings.addString("version", "v1.14.0");
+    Settings.addInput("version", "v1.14.0", "");
     Settings.addBool("removeSpam", "Remove bot spam", true);
     Settings.addBool("findAndHideSpam", "Remove messages that have been sent more than 3 times", true);
     Settings.addInput("maxprune", "Max messages before pruning", "500");
