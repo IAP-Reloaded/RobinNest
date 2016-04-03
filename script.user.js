@@ -178,6 +178,7 @@ function sendUpdate() {
     ||msg.includes(' ')
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
+    ||!msg.includes('NSFW Robin Bot]')
         ) {
             mutation.addedNodes[0].style.display = "none";
         }
