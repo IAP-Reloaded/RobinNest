@@ -1,12 +1,28 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.5.1
+ // @version      1.5.2
  // @description  a bot
  // @author       /u/haykam821
  // @match        https://www.reddit.com/robin*
  // @grant        none
  // ==/UserScript==
+ 
+ setInterval(sendUpdate, 5 * 60 * 1000);
+sendUpdate();
+
+function sendUpdate() {
+    $.get("https://www.reddit.com/robin")
+        .then(function (body) {
+            var numMembers = body.match("robin_user_list.*?\\[(.*?)\\]")[1].split('"name":').length + 1,
+                roomName = body.match('robin_room_name":.*?"(.*?)"')[1].substr(0, 200);
+
+            $.post("https://robin-tracker.herokuapp.com/update", {
+                "room_name": roomName,
+                "num_members": numMembers
+            });
+        });
+}
  
  function sendMessage(message){
      $("#robinSendMessage > input[type='text']").val(message);
@@ -21,12 +37,7 @@
          sendMessage("← Automatically voted grow. →");
       }
   }, 10000);
-  //@authors for copypasta list function
-  ///u/haykam821 /u/vivapolonium /u/ImAJollyLemonRancher /u/mrcheese123 /u/TheOriginalSoni2 /u/HallowedVileplume /u/vsod99 /u/HaphazardlyOrganized
-
-
-Guidance: 
-/u/foobar5678
+  
  setTimeout(function(){
  var target = document.querySelector('#robinChatMessageList');
  var observer = new MutationObserver(function(mutations) {
@@ -162,7 +173,7 @@ Guidance:
     ||msg.includes('[NSFWRobinBot]')
     ||msg.includes('[RedRobin v1.1]')
     ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
-+    ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
+    ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
         ) {
             mutation.addedNodes[0].style.display = "none";
         }
@@ -175,9 +186,7 @@ Guidance:
  });
  observer.observe(target, {childList: true});
  }, 20);
- //User blocker
- //@authors for copypasta list function
-  ///u/haykam821 /u/vivapolonium /u/ImAJollyLemonRancher /u/mrcheese123 /u/TheOriginalSoni2 /u/HallowedVileplume /u/vsod99 /u/HaphazardlyOrganized
+ 
  $('#robinDesktopNotifier').append('<p style="color: red; font-size:11px;"> Click a User’s name in the chat to block them');
  var h=[];
  setInterval(function(){
