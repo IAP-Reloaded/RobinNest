@@ -204,7 +204,6 @@ function sendUpdate() {
              var e = this.get("name").toLowerCase()
                , t = e.replace(/[^a-z0-9]/g, "") // gets rid of special characters like "_"
                , n = parseInt(t, 36) % f; // f = 6
-             document.write('Your color is: +n);}
  ,100);
  
  $('#robinDesktopNotifier').append('/help, /commands, /vote grow, /vote stay, /vote abandon, /count, /tally');
