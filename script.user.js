@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.7.5
+ // @version      1.7.6
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -203,8 +203,8 @@ function sendUpdate() {
 //        }
 //    });
 // });
- observer.observe(target, {childList: true});
- }, 20);
+// observer.observe(target, {childList: true});
+// }, 20);
  
  $('#robinDesktopNotifier').append('<p style="color: red; font-size:11px;"> Click a User’s name in the chat to block them');
  var h=[];
