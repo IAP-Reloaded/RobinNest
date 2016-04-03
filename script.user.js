@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.6.8
+ // @version      1.6.8.1
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -174,6 +174,10 @@ function sendUpdate() {
     ||msg.includes('[RedRobin v1.1]')
     ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
     ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
+    ||msg.includes('DANKEST MEME')
+    ||msg.includes(' ')
+    ||msg.includes('EARLY BACON WARRIOR BEARS!')
+    ||msg.includes('[NSFW Robin Bot]')
         ) {
             mutation.addedNodes[0].style.display = "none";
         }
