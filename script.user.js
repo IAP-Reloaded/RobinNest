@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.3
+ // @version      1.3.1
  // @description  a bot
  // @author       /u/haykam821
  // @match        https://www.reddit.com/robin*
@@ -15,12 +15,10 @@
  
   $('#robinDesktopNotifier').append('<input type="checkbox" name="trivia" value="on">Block Trivia (only blocks questions)<br>');
   
-  setInterval(function(){
-     if (text-counter-input.value = "") {
+  setInterval(function() {
+     if (text-counter-input.value == "") {
          sendMessage("/vote grow");
          sendMessage("← Automatically voted grow. →");
-     if (field.value == '') {
-         alert("Field is empty");
       }
   }, 10000);
   
@@ -158,6 +156,7 @@
     ||msg.includes('[CAT FACT]')
     ||msg.includes('[NSFWRobinBot]')
     ||msg.includes('[RedRobin v1.1]')
+    ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
         ) {
             mutation.addedNodes[0].style.display = "none";
         }
@@ -193,4 +192,4 @@
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
  
- $('.content').append('<p id=robinsnest">I will add a new interface here.</p>');
+ $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.3.1. Or so.</p>');
