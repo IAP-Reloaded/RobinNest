@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RobinNest
 // @namespace    simpcraft.com
-// @version      1.2.4.2
+// @version      1.2.4.3
 // @description  a bot
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -14,9 +14,10 @@ function sendMessage(message){
 }
 
 $('#robinDesktopNotifier').append('<input type="checkbox" name="trivia" value="on">Block Trivia (only blocks questions)<br>');
+$('#robinDesktopNotifier').append('<input type="checkbox" name="autogrow" value="on">Auto-Grow<br>');
 
 setInterval(function(){
-    if (text-counter-input.value == '') {
+    if (trivia.checked) {
         alert("Field is empty");
     }
 }, 10000);
