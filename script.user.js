@@ -21,7 +21,12 @@
          sendMessage("← Automatically voted grow. →");
       }
   }, 10000);
-  
+  //@authors for copypasta list function
+  ///u/haykam821 /u/vivapolonium /u/ImAJollyLemonRancher /u/mrcheese123 /u/TheOriginalSoni2 /u/HallowedVileplume /u/vsod99 /u/HaphazardlyOrganized
+
+
+Guidance: 
+/u/foobar5678
  setTimeout(function(){
  var target = document.querySelector('#robinChatMessageList');
  var observer = new MutationObserver(function(mutations) {
@@ -170,7 +175,9 @@
  });
  observer.observe(target, {childList: true});
  }, 20);
- 
+ //User blocker
+ //@authors for copypasta list function
+  ///u/haykam821 /u/vivapolonium /u/ImAJollyLemonRancher /u/mrcheese123 /u/TheOriginalSoni2 /u/HallowedVileplume /u/vsod99 /u/HaphazardlyOrganized
  $('#robinDesktopNotifier').append('<p style="color: red; font-size:11px;"> Click a User’s name in the chat to block them');
  var h=[];
  setInterval(function(){
