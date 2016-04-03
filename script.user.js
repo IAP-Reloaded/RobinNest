@@ -175,6 +175,7 @@ function notifyMe() {
     ||msg.includes('nigglets')
     ||msg.includes('VAPE NATION')
     ||msg.includes('STAY TO GAIN')
+    ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
     ||msg.includes('[CAT FACT]')
     ||msg.includes('[NSFWRobinBot]')
     ||msg.includes('[RedRobin v1.1]')
