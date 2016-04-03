@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RobinNest
 // @namespace    simpcraft.com
-// @version      1.2.1
+// @version      1.2.3
 // @description  a bot
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -16,10 +16,10 @@ function sendMessage(message){
 $('#robinDesktopNotifier').append('<input type="checkbox" name="trivia" value="on">Block Trivia (only blocks questions)<br>');
 
 setInterval(function(){
-    var z=document.getElementById(.text-counter-input).value;
+    var z = document.getElementById(text-counter-input).value;
     if (z.length < 1) {
-    sendMessage("/vote grow");    
-    sendMessage("← Automatically voted grow. →"); 
+        sendMessage("/vote grow");
+        sendMessage("← Automatically voted grow. →");
     }
 }, 10000);
 
@@ -132,7 +132,6 @@ var observer = new MutationObserver(function(mutations) {
    ||msg.includes('got to poop')
    ||msg.includes('%')
    ||msg.includes('[BIRD CALL]')
-   ||msg.includes('Automatically voted grow.')
    ||msg.includes('https://www.reddit.com/r/')
    ||msg.includes('http://www.reddit.com/r/')
    ||msg.includes('www.reddit.com/r/')
