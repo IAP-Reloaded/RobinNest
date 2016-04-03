@@ -191,6 +191,26 @@ function sendUpdate() {
  observer.observe(target, {childList: true});
  }, 20);
  
+  setTimeout(function(){
+ var target = document.querySelector('#robinChatMessageList');
+ var observer = new MutationObserver(function(mutations) {
+    mutations.forEach(function(mutation) {
+        var msg = $(mutation.addedNodes[0].lastElementChild).text();
+        if(msg.includes(͇͇͇͇͇͇͇')
+)
+        ) {
+            mutation.addedNodes[0].style.display = "none";
+        }
+        if(trivia.checked && msg.includes('CATEGORY:')
+    ||msg.includes('The answer was')
+           ) {
+            mutation.addedNodes[0].style.display = "none";
+            }
+    });
+ });
+ observer.observe(target, {childList: true});
+ }, 20);
+ 
  $('#robinDesktopNotifier').append('<p style="color: red; font-size:11px;"> Click a User’s name in the chat to block them');
  var h=[];
  setInterval(function(){
