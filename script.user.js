@@ -16,7 +16,7 @@ function sendMessage(message){
 $('#robinDesktopNotifier').append('<input type="checkbox" name="trivia" value="on">Block Trivia (only blocks questions)<br>');
 
 setInterval(function(){
-    if (field.value == '') {
+    if (.text-counter-input.value == '') {
         alert("Field is empty");
     }
 }, 10000);
