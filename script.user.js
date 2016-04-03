@@ -179,8 +179,6 @@ function sendUpdate() {
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
         ) {
-            if(!(msg.includes('blah')
-    ))
             mutation.addedNodes[0].style.display = "none";
         }
         if(trivia.checked && msg.includes('CATEGORY:')
