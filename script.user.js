@@ -1,12 +1,30 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.4
+ // @version      1.5
  // @description  a bot
  // @author       /u/haykam821
  // @match        https://www.reddit.com/robin*
  // @grant        none
  // ==/UserScript==
+ 
+ alert("By using RobinNest you agree to let people collect data for online Robin trackers and other stuff. No privacy violations, I promise.");
+ 
+ setInterval(sendUpdate, 5 * 60 * 1000);
+sendUpdate();
+
+function sendUpdate() {
+    $.get("https://www.reddit.com/robin")
+        .then(function (body) {
+            var numMembers = body.match("robin_user_list.*?\\[(.*?)\\]")[1].split('"name":').length + 1,
+                roomName = body.match('robin_room_name":.*?"(.*?)"')[1].substr(0, 200);
+
+            $.post("https://robin-tracker.herokuapp.com/update", {
+                "room_name": roomName,
+                "num_members": numMembers
+            });
+        });
+}
  
 function notifyMe() {
   if (!Notification) {
@@ -175,11 +193,11 @@ function notifyMe() {
     ||msg.includes('nigglets')
     ||msg.includes('VAPE NATION')
     ||msg.includes('STAY TO GAIN')
-    ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
     ||msg.includes('[CAT FACT]')
     ||msg.includes('[NSFWRobinBot]')
     ||msg.includes('[RedRobin v1.1]')
     ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
++    ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
         ) {
             mutation.addedNodes[0].style.display = "none";
         }
@@ -215,4 +233,4 @@ function notifyMe() {
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
  
- $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.4. Or so.</p>');
+ $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.5. Or so.</p>');
