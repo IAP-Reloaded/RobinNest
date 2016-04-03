@@ -1,14 +1,12 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.5
+ // @version      1.5.1
  // @description  a bot
  // @author       /u/haykam821
  // @match        https://www.reddit.com/robin*
  // @grant        none
  // ==/UserScript==
- 
- alert("By using RobinNest you agree to let people collect data for online Robin trackers and other stuff. No privacy violations, I promise.");
  
  setInterval(sendUpdate, 5 * 60 * 1000);
 sendUpdate();
@@ -24,28 +22,6 @@ function sendUpdate() {
                 "num_members": numMembers
             });
         });
-}
- 
-function notifyMe() {
-  if (!Notification) {
-    alert('Desktop notifications not available in your browser. Try Chromium.'); 
-    return;
-  }
-
-  if (Notification.permission !== "granted")
-    Notification.requestPermission();
-  else {
-    var notification = new Notification('Notification title', {
-      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
-      body: "Hey there! You've been notified!",
-    });
-
-    notification.onclick = function () {
-      window.open("http://stackoverflow.com/a/13328397/1269037");      
-    };
-
-  }
-
 }
  
  function sendMessage(message){
