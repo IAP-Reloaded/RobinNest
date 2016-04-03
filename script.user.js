@@ -1,12 +1,34 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.3.1
+ // @version      1.4
  // @description  a bot
  // @author       /u/haykam821
  // @match        https://www.reddit.com/robin*
  // @grant        none
  // ==/UserScript==
+ 
+function notifyMe() {
+  if (!Notification) {
+    alert('Desktop notifications not available in your browser. Try Chromium.'); 
+    return;
+  }
+
+  if (Notification.permission !== "granted")
+    Notification.requestPermission();
+  else {
+    var notification = new Notification('Notification title', {
+      icon: 'http://cdn.sstatic.net/stackexchange/img/logos/so/so-icon.png',
+      body: "Hey there! You've been notified!",
+    });
+
+    notification.onclick = function () {
+      window.open("http://stackoverflow.com/a/13328397/1269037");      
+    };
+
+  }
+
+}
  
  function sendMessage(message){
      $("#robinSendMessage > input[type='text']").val(message);
@@ -192,4 +214,4 @@
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
  
- $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.3.1. Or so.</p>');
+ $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.4. Or so.</p>');
