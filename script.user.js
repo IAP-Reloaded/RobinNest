@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.6.1
+ // @version      1.6.2
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -207,7 +207,7 @@ function sendUpdate() {
              document.write('<inputhidden" name="whatever" id="colors" value="'+n+'">');}
  ,100);
  
- $('#robinDesktopNotifier').append('<input class="spoilerbutton" id="commandlist" type="button" value="Show" onclick="this.value=this.value=='Show'?'Hide':'Show';"><div class="spoiler"><div><ul> <li>/help</li> <li>/commands</li> <li>/vote grow</li> <li>/vote stay</li> <li>/vote abandon</li> <li>/count</li> <li>/tally</li></ul></div></div>');
+ $('#robinDesktopNotifier').append('<ul> <li>/help</li> <li>/commands</li> <li>/vote grow</li> <li>/vote stay</li> <li>/vote abandon</li> <li>/count</li> <li>/tally</li></ul>');
  
  $('#commandlist').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
  
