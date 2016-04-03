@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RobinNest
 // @namespace    simpcraft.com
-// @version      1.2.*sigh*
+// @version      1.2.6 *sigh*
 // @description  a bot
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
