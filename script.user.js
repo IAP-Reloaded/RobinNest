@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.6.7
+ // @version      1.6.8
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -204,6 +204,7 @@ function sendUpdate() {
              var e = this.get("name").toLowerCase()
                , t = e.replace(/[^a-z0-9]/g, "") // gets rid of special characters like "_"
                , n = parseInt(t, 36) % f; // f = 6
+ }
  ,100);
  
  $('#robinDesktopNotifier').append('/help, /commands, /vote grow, /vote stay, /vote abandon, /count, /tally');
