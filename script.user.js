@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.6.8.1
+ // @version      1.7
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -196,16 +196,11 @@ function sendUpdate() {
  var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
         var msg = $(mutation.addedNodes[0].lastElementChild).text();
-        if(msg.includes(͇͇͇͇͇͇͇')
+        if(msg.includes('haykam821')
 )
         ) {
-            mutation.addedNodes[0].style.display = "none";
+            mutation.addedNodes[0].style.color = "gold";
         }
-        if(trivia.checked && msg.includes('CATEGORY:')
-    ||msg.includes('The answer was')
-           ) {
-            mutation.addedNodes[0].style.display = "none";
-            }
     });
  });
  observer.observe(target, {childList: true});
