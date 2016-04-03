@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.12.5
+ // @version      1.12.6
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -174,7 +174,7 @@ function sendUpdate() {
     ||msg.includes('Digest before Sleeping or you will have Bad Dreams!')
     ||msg.includes('ส็็็็็็็็็็็็็็็็็็็็็')
     ||msg.includes('DANKEST MEME')
-    ||msg.includes(' ')
+    ||msg.includes('John Madden')
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
         ) {
