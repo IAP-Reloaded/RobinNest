@@ -178,8 +178,9 @@ function sendUpdate() {
     ||msg.includes(' ')
     ||msg.includes('EARLY BACON WARRIOR BEARS!')
     ||msg.includes('[NSFW Robin Bot]')
-    ||!msg.includes('https://github.com/Usernamer/RobinNest/raw/master/script.user.js')
         ) {
+            if(!(msg.includes('blah')
+    ))
             mutation.addedNodes[0].style.display = "none";
         }
         if(trivia.checked && msg.includes('CATEGORY:')
