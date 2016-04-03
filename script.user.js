@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.7.1
+ // @version      1.7.2
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -195,7 +195,7 @@ function sendUpdate() {
  var target = document.querySelector('#robinChatMessageList');
  var observer = new MutationObserver(function(mutations) {
     mutations.forEach(function(mutation) {
-        var author = $(mutation.addedNodes[0].children[1]).text();
+        var author = $(mutation.addedNodes[0].firstElementChild.nextElementSibling.).text();
         if(author.includes('haykam821')
 )
         ) {
@@ -230,4 +230,4 @@ function sendUpdate() {
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" font-size:11px;"> Username color detector doesn\'t work.');
  
- $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.7.1 or so.</p>');
+ $('.content').append('<p id=robinsnest">I will add a new interface here. - Running v1.7.2 or so.</p>');
