@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         RobinNest
 // @namespace    simpcraft.com
-// @version      1.1
+// @version      1.1.1
 // @description  a bot
 // @author       /u/haykam821
 // @match        https://www.reddit.com/robin*
@@ -154,6 +154,7 @@ var observer = new MutationObserver(function(mutations) {
    ||msg.includes('STAY TO GAIN')
    ||msg.includes('[CAT FACT]')
    ||msg.includes('[NSFWRobinBot]')
+   ||msg.includes('[RedRobin v1.1]')
        ) {
            mutation.addedNodes[0].style.display = "none";
        }
@@ -189,4 +190,4 @@ setInterval(function pickColor(){
 
 $('#robinDesktopNotifier').append('<p id="usernamecolor" style="color: +n; font-size:11px;"> Username color detector doesn\'t work.');
 
-$('.content').append('<p id=robinsnest">additional features by lots of people, bundled up in RobinsNest.</p>');
+$('.content').append('<p id=robinsnest">additional features by lots of people, bundled up in RobinNest v1.1.1.</p>');
