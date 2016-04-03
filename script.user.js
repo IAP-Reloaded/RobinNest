@@ -156,6 +156,9 @@ var observer = new MutationObserver(function(mutations) {
    ||msg.includes('[CAT FACT]')
    ||msg.includes('[NSFWRobinBot]')
    ||msg.includes('[RedRobin v1.1]')
+   ||msg.includes('John Madden')
+   ||msg.includes('[REAP TIMER]')
+   ||msg.includes('[#channel]')
        ) {
            mutation.addedNodes[0].style.display = "none";
        }
