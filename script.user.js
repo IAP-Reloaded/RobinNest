@@ -1,7 +1,7 @@
  // ==UserScript==
  // @name         RobinNest
  // @namespace    simpcraft.com
- // @version      1.8.1
+ // @version      1.9
  // @description  a bot
  // @author       /u/haykam821, /u/vivapolonium, /u/ImAJollyLemonRancher, /u/mrcheese123, /u/TheOriginalSoni2, /u/HallowedVileplume, /u/vsod99, /u/HaphazardlyOrganized, and /u/foobar5678
  // @match        https://www.reddit.com/robin*
@@ -229,3 +229,8 @@ function sendUpdate() {
  $('#robinDesktopNotifier').append('/help, /commands, /vote grow, /vote stay, /vote abandon, /count, /tally');
  
  $('#robinDesktopNotifier').append('<p id="usernamecolor" font-size:11px;"> Username color detector doesn\'t work.');
+
+ var css = document.createElement("style");
+ css.type = "text/css";
+ css.innerHTML = ".banner{display:block;-moz-box-sizing:border-box;box-sizing:border-box;background:url(http://notrealdomain2.com/newbanner.png) no-repeat;width:180px;height:236px;padding-left:180px}";
+ document.body.appendChild(css);
